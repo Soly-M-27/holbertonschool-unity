@@ -58,21 +58,4 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quit Game");
     }
-
-/*
-    /// <summary>
-    /// Method to activate OnClick Events
-    /// </summary>
-    public void OnClickOPt()
-    {
-        Menu.SetActive(false);
-        OptMenu.SetActive(true);
-    }
-
-    public void OnClickBack()
-    {
-        OptMenu.SetActive(false);
-        Menu.SetActive(true);
-    }
-    */
 }
