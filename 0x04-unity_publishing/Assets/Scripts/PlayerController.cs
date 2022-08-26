@@ -50,27 +50,19 @@ public class PlayerController : MonoBehaviour
             WinLoseText.text = "Game Over!";     
             StartCoroutine(LoadScene(3));
         }
-
-        if (Input.GetKey(KeyCode.A))
-            rb.AddForce(Vector3.left * speed);
-        if (Input.GetKey(KeyCode.D))
-            rb.AddForce(Vector3.right * speed);
-        if (Input.GetKey(KeyCode.W))
-            rb.AddForce(Vector3.forward * speed);
-        if (Input.GetKey(KeyCode.S))
-            rb.AddForce(Vector3.back * speed);
-
     }
 
     // FixedUpdate is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey("up") || Input.GetKey("down") || Input.GetKey("left") || Input.GetKey("right"))
-        {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.z = Input.GetAxisRaw("Vertical");
-            rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-        }
+        if (Input.GetKey(KeyCode.A) || Input.GetKey("left"))
+            rb.AddForce(Vector3.left * speed);
+        if (Input.GetKey(KeyCode.D) || Input.GetKey("right"))
+            rb.AddForce(Vector3.right * speed);
+        if (Input.GetKey(KeyCode.W) || Input.GetKey("up"))
+            rb.AddForce(Vector3.forward * speed);
+        if (Input.GetKey(KeyCode.S) || Input.GetKey("down"))
+            rb.AddForce(Vector3.back * speed);
     }
 
     //Trigger Colliders, Destroy, Compare, etc.
