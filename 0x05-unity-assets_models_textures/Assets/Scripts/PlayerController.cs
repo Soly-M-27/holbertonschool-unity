@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
-
     Rigidbody rb;  
 
     private CharacterController characterController;
@@ -20,6 +19,8 @@ public class PlayerController : MonoBehaviour
     // Private field to fix Player StepOffset. Set it to 0
     // when character is on the ground to avoid jerky jumping;
     private float originalStepOffset;
+    Vector3 start_pos;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +28,14 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         originalStepOffset = characterController.stepOffset;
         rb = GetComponent<Rigidbody>();
+        start_pos = player.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        OutOfRange();
+
         float H = Input.GetAxis("Horizontal");
         float V = Input.GetAxis("Vertical");
 
@@ -84,6 +88,13 @@ public class PlayerController : MonoBehaviour
         {
             // Sets it to 0 when character is on the ground;
             characterController.stepOffset = 0;
+        }
+    }
+    void OutOfRange()
+    {
+        if (transform.position.y <= -25)
+        {
+            player.transform.position = start_pos;
         }
     }
 }
