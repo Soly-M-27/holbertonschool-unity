@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         originalStepOffset = characterController.stepOffset;
         rb = GetComponent<Rigidbody>();
-        start_pos = player.transform.position;
+        start_pos = new Vector3(0f, 50f, 0f);
     }
 
     // Update is called once per frame
