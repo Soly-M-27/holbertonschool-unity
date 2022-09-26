@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.y <= -25)
         {
-            player.transform.position = start_pos;
+            transform.position = start_pos;
         }
     }
 }
