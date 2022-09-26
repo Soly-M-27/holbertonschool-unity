@@ -7,7 +7,7 @@ using TMPro;
 public class WinTrigger : MonoBehaviour
 {
     public GameObject player;
-    public Text TimerText;
+    public TMP_Text TimerText;
 
     void OnTriggerExit(Collider other)
     {
