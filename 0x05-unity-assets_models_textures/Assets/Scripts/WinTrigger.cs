@@ -11,7 +11,7 @@ public class WinTrigger : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        player.GetComponent<Timer>.enabled = false;
+        player.GetComponent<Timer>().enabled = false;
         TimerText.color = Color.green;
         TimerText.fontSize = 60;
     }
