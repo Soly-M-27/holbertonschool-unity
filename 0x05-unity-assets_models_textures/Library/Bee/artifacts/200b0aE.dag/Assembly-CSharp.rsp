@@ -352,6 +352,7 @@
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Timer.cs"
 "Assets/Scripts/TimerTrigger.cs"
+"Assets/Scripts/WinTrigger.cs"
 -langversion:9.0
 
 /deterministic
