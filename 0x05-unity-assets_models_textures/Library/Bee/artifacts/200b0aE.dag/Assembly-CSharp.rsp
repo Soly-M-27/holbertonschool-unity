@@ -350,6 +350,8 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/Timer.cs"
+"Assets/Scripts/TimerTrigger.cs"
 -langversion:9.0
 
 /deterministic
