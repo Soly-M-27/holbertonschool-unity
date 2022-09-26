@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        player = GameObject.Find("Player");
         originalStepOffset = characterController.stepOffset;
         rb = GetComponent<Rigidbody>();
         start_pos = new Vector3(0f, 50f, 0f);
@@ -34,32 +35,59 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OutOfRange();
+        //I have no idea why the heck this doesn't work
+        if (player.transform.position.y <= -25)
+        {
+            player.transform.position = start_pos;
+        }
 
         float H = Input.GetAxis("Horizontal");
         float V = Input.GetAxis("Vertical");
 
         Vector3 moveDir = new Vector3(H, 0, V);
+        /*if (moveDir.y <= -25)
+        {
+            player.transform.position = start_pos; //does not work
+        }*/
+        //Debug.Log("moveDir is: " + moveDir);
         float magnitude = Mathf.Clamp01(moveDir.magnitude) * speed;
+        /*if (magnitude <= -25)
+        {
+            player.transform.position = start_pos; //does not work
+        }*/
+        //Debug.Log("magnitude is: " + magnitude);
         moveDir.Normalize();
 
         // Adjust the gravity. We're getting the physics gravity value
-        // and adding this amount to our y speed every second.
+        // and adding this amount to our ySpeed every second.
         // Time.delatTime is the amount of seconds that have passed since the
         // last frame. By default the physics gravity value is set to
         // -9.81 in a Y direction. So this line will decrease our Y Speed
         // by 9.81 every second.
         ySpeed += Physics.gravity.y * Time.deltaTime;
+        //Debug.Log("ySpeed is: " + ySpeed);
 
+        /*if (ySpeed <= -25)
+        {
+            player.transform.position = start_pos; //does not work
+        }*/
+        
         // Freeze Cylinder in place to avoid floating rotations 
         rb.constraints = RigidbodyConstraints.FreezeRotation;
 
         // Now we need to use our ySpeed when moving the character. 
         // To do this we need to extract the calculation we pass into
         // the SimpleMove method and instead assign it to variable.
-
         Vector3 velocity = moveDir * magnitude;
         velocity.y = ySpeed;
+        //Debug.Log("velocity is: " + velocity);
+        //Debug.Log("velocity.y is: " + velocity.y);
+
+        /*if (velocity.y <= -25)
+        {
+            player.transform.position = start_pos; //does not work
+        }*/
+        
 
         // SimpleMove is only for simple movement and ignores any
         // movement in the Y direction. Switch to Move Method.
@@ -81,6 +109,10 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
                 ySpeed = jumpForce;
+                /*if (ySpeed <= -25)
+                {
+                    player.transform.position = start_pos; //does not work
+                }*/
                 rb.constraints = RigidbodyConstraints.FreezeRotation;
             }
         }
@@ -88,13 +120,6 @@ public class PlayerController : MonoBehaviour
         {
             // Sets it to 0 when character is on the ground;
             characterController.stepOffset = 0;
-        }
-    }
-    void OutOfRange()
-    {
-        if (transform.position.y <= -25)
-        {
-            transform.position = start_pos;
         }
     }
 }
