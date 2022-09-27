@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         player = GameObject.Find("Player");
         originalStepOffset = characterController.stepOffset;
         rb = GetComponent<Rigidbody>();
-        start_pos = new Vector3(0f, 50f, 0f);
+        //start_pos = new Vector3(0f, 50f, 0f);
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         //I have no idea why the heck this doesn't work
         if (player.transform.position.y <= -25)
         {
-            player.transform.position = start_pos;
+            transform.position = new Vector3(0, 25, 0);
         }
 
         float H = Input.GetAxis("Horizontal");
