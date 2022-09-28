@@ -9,6 +9,11 @@ public class WinTrigger : MonoBehaviour
     public GameObject player;
     public TMP_Text TimerText;
 
+    void Start()
+    {
+        player = GameObject.Find("Player");
+    }
+
     void OnTriggerExit(Collider other)
     {
         player.GetComponent<Timer>().enabled = false;
