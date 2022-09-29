@@ -355,6 +355,7 @@
 "Assets/FarlandSkies/Demo/Scripts/Skybox/SkyboxRotator.cs"
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/Spin.cs"
 "Assets/Scripts/Timer.cs"
 "Assets/Scripts/TimerTrigger.cs"
 "Assets/Scripts/WinTrigger.cs"
