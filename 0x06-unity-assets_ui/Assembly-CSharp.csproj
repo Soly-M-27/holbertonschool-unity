@@ -45,7 +45,6 @@
      <Compile Include="Assets/FarlandSkies/Demo/Scripts/Player/SmoothMouseLook.cs" />
      <Compile Include="Assets/Scripts/TimerTrigger.cs" />
      <Compile Include="Assets/FarlandSkies/Demo/Scripts/Skybox/SkyboxChanger.cs" />
-     <Compile Include="Assets/Scripts/Spin.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
