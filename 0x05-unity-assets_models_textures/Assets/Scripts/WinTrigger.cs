@@ -14,10 +14,15 @@ public class WinTrigger : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    void OnTriggerExit(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        player.GetComponent<Timer>().enabled = false;
-        TimerText.color = Color.green;
-        TimerText.fontSize = 60;
+        PlayerController Get = player.GetComponent<PlayerController>();
+        if (other.tag == "Player")
+        {
+            Get.CollidedWithFlag = true;
+            player.GetComponent<Timer>().enabled = false;
+            TimerText.color = Color.green;
+            TimerText.fontSize = 60;
+        }
     }
 }

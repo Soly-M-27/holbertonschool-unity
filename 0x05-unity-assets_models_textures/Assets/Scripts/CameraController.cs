@@ -19,7 +19,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OutOfRange();
+
     }
 
     void LateUpdate()
@@ -36,13 +36,5 @@ public class CameraController : MonoBehaviour
     {
         // Camera will rotate on X axis with mouse movement
         offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * 4f, Vector3.up) * offset;
-    }
-
-    void OutOfRange()
-    {
-        if (transform.position.y <= -25)
-        {
-            player.transform.position = new Vector3(0f, 75f, 0f);
-        }
     }
 }

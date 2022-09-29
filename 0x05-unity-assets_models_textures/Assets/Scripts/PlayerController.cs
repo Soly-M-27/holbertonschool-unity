@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     Vector3 start_pos;
     public GameObject player;
 
+    public bool CollidedWithFlag = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,10 +38,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //I have no idea why the heck this doesn't work
-        if (player.transform.position.y <= -25)
-        {
-            transform.position = new Vector3(0, 25, 0);
-        }
+        //Debug.Log(player.transform.position.y);
 
         float H = Input.GetAxis("Horizontal");
         float V = Input.GetAxis("Vertical");
@@ -95,6 +94,15 @@ public class PlayerController : MonoBehaviour
         // moves at the same speed regardless of the frame rate
         characterController.Move(velocity * Time.deltaTime);
 
+        if (CollidedWithFlag == false)
+        {
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)
+            || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+            {
+                this.GetComponent<Timer>().enabled = true;
+            }
+        }
+
         if (characterController.isGrounded) // isGrounded is a Flag
         {
             // When character is not on the ground, set OG StepOffset
@@ -120,6 +128,13 @@ public class PlayerController : MonoBehaviour
         {
             // Sets it to 0 when character is on the ground;
             characterController.stepOffset = 0;
+        }
+
+        if (transform.position.y < -25)
+        {
+            //this.GetComponent<Rigidbody>().isKinematic = true;
+            transform.position = new Vector3(0, 25, 0);
+            //Debug.Log("We are falling");
         }
     }
 }
