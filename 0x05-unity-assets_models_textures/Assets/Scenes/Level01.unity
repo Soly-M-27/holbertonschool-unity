@@ -7430,7 +7430,6 @@ GameObject:
   - component: {fileID: 1147878986}
   - component: {fileID: 1147878985}
   - component: {fileID: 1147878984}
-  - component: {fileID: 1147878989}
   - component: {fileID: 1147878988}
   m_Layer: 0
   m_Name: WinFlag
@@ -7533,20 +7532,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 9080522158509548809}
   TimerText: {fileID: 1192124974}
---- !u!114 &1147878989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147878983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc51d586952e7418c9a2322718d44e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  TimerText: {fileID: 0}
 --- !u!1 &1157837414 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -350358972390284466, guid: a44fd6f0a77f14a6cacfc165e6a04149, type: 3}
@@ -14014,7 +13999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4519003953224162649, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 83.7
       objectReference: {fileID: 0}
     - target: {fileID: 4519003953224162649, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14046,6 +14031,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7302428257597974060, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302428257597974060, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7302428257597974060, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
@@ -14082,6 +14071,7 @@ MonoBehaviour:
   speed: 5
   jumpForce: 7
   player: {fileID: 9080522158509548809}
+  CollidedWithFlag: 0
 --- !u!54 &9080522158509548811
 Rigidbody:
   m_ObjectHideFlags: 0
