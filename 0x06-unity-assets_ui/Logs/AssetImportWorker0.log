@@ -408,3 +408,27 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 669.834150 seconds.
+  path: Assets/Scenes/Level03.unity
+  artifactKey: Guid(2dcda079ce4cf44cb8cd7bfc9787209d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level03.unity using Guid(2dcda079ce4cf44cb8cd7bfc9787209d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd07b6e0403055c3bf5baa26e32bbf174') in 0.008052 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3681.146748 seconds.
+  path: Assets/Scenes/Level02.unity
+  artifactKey: Guid(4611ac87b532248fc8f7a0bdc8a3a9f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level02.unity using Guid(4611ac87b532248fc8f7a0bdc8a3a9f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '188dde3e5c982f1d55ddf38af7c5996f') in 0.001361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.898024 seconds.
+  path: Assets/Scenes/Level03.unity
+  artifactKey: Guid(2dcda079ce4cf44cb8cd7bfc9787209d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level03.unity using Guid(2dcda079ce4cf44cb8cd7bfc9787209d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa6cbfa5855cccf44561375401b932e0') in 0.002540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 107.621941 seconds.
+  path: Assets/Scenes/Level03.unity
+  artifactKey: Guid(2dcda079ce4cf44cb8cd7bfc9787209d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level03.unity using Guid(2dcda079ce4cf44cb8cd7bfc9787209d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d6374c696032b556147ca9eb8b7dd1c') in 0.006658 seconds 
