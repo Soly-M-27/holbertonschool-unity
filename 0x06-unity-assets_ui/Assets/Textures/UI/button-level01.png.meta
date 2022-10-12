@@ -107,10 +107,10 @@ TextureImporter:
       name: button-level01_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
+        x: 0
+        y: 20
         width: 600
-        height: 650
+        height: 610
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: button-level01_1
       rect:
         serializedVersion: 2
-        x: 601
-        y: 0
+        x: 600
+        y: 20
         width: 600
-        height: 650
+        height: 610
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,6 +141,27 @@ TextureImporter:
       bones: []
       spriteID: e5558ec75ac294e25986e10c753519cc
       internalID: 1202390461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button-level01_2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 20
+        width: 600
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae4568ab79444860a60e4cc31959b7a
+      internalID: -488814031
       vertices: []
       indices: 
       edges: []
@@ -156,6 +177,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      button-level01_2: -488814031
       button-level01_1: 1202390461
       button-level01_0: 1085059509
   spritePackingTag: 
