@@ -9,6 +9,7 @@ TagManager:
   - Level02
   - Level03
   - Options
+  - InvertedYToggle
   layers:
   - Default
   - TransparentFX
