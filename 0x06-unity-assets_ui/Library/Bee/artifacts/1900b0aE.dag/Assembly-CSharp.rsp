@@ -357,6 +357,7 @@
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/OptionsMenu.cs"
+"Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Timer.cs"
 "Assets/Scripts/TimerTrigger.cs"
