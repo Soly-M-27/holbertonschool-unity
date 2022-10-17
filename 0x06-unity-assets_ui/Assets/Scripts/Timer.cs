@@ -12,6 +12,9 @@ public class Timer : MonoBehaviour
     private float millisecs;
     private float mil;
 
+    public GameObject Win_Screen;
+    public TMP_Text FinalText_Time;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +34,17 @@ public class Timer : MonoBehaviour
         millisecs = (mil % 1) * 100;
 
         TimerText.text = string.Format("{0:0}:{1:00}.{2:00}", mins, secs, millisecs);
+
+        if (Win_Screen.activeInHierarchy)
+        {
+            Win();
+        }
+    }
+
+    public void Win()
+    {
+        FinalText_Time.text = TimerText.text;
+        TimerText.enabled = false;
+        this.enabled = false;   
     }
 }
