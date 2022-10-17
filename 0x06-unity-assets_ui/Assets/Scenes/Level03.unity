@@ -4037,6 +4037,7 @@ GameObject:
   - component: {fileID: 906118051}
   - component: {fileID: 906118053}
   - component: {fileID: 906118055}
+  - component: {fileID: 906118056}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4188,6 +4189,21 @@ MonoBehaviour:
   TimerText: {fileID: 269105972}
   Win_Screen: {fileID: 793576205}
   FinalText_Time: {fileID: 793576206}
+--- !u!114 &906118056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906118044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7a8c8e341724b809cddb34f5024f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 1702003956}
+  MainCam: {fileID: 580392103}
+  player: {fileID: 906118044}
 --- !u!1 &910539831
 GameObject:
   m_ObjectHideFlags: 0
@@ -8224,6 +8240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 977b6f66ece1244e987520d3d63e6af4, type: 3}
+--- !u!1 &1702003956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5034383956605615238, guid: 977b6f66ece1244e987520d3d63e6af4, type: 3}
+  m_PrefabInstance: {fileID: 1702003955}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1705585869 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8766471599729590281, guid: c5e091a9136ba444197269cecc4eec9f, type: 3}
@@ -10394,6 +10415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 906118044}
+  MainCam: {fileID: 580392103}
   TimerText: {fileID: 269105972}
   WinCanvas: {fileID: 793576205}
 --- !u!1001 &2091661260
