@@ -6087,7 +6087,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b9d7e403e2e4d2eb2be62b7b17482a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 9080522158509548809}
+  player: {fileID: 9080522158509548832}
+  is_Inverted: 0
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6100,8 +6101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7a8c8e341724b809cddb34f5024f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 6892901647702715499}
-  MainCam: {fileID: 0}
+  pause: {fileID: 1307899355}
+  MainCam: {fileID: 963194225}
   player: {fileID: 9080522158509548809}
 --- !u!1 &963799750 stripped
 GameObject:
@@ -14228,11 +14229,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 977b6f66ece1244e987520d3d63e6af4, type: 3}
---- !u!223 &6892901647702715499 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 6892901646998022990, guid: 977b6f66ece1244e987520d3d63e6af4, type: 3}
-  m_PrefabInstance: {fileID: 6892901647702715498}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9080522158509548808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14389,3 +14385,8 @@ MonoBehaviour:
   pause: {fileID: 1307899355}
   MainCam: {fileID: 963194225}
   player: {fileID: 9080522158509548809}
+--- !u!4 &9080522158509548832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4519003953224162649, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+  m_PrefabInstance: {fileID: 9080522158509548808}
+  m_PrefabAsset: {fileID: 0}
