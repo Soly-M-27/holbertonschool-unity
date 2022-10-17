@@ -14376,21 +14376,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4519003953224162649, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
   m_PrefabInstance: {fileID: 9080522158509548808}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9080522158509548833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9080522158509548809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c7a8c8e341724b809cddb34f5024f0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pause: {fileID: 1510197025}
-  MainCam: {fileID: 963194225}
-  player: {fileID: 9080522158509548809}
 --- !u!114 &9080522158509548834
 MonoBehaviour:
   m_ObjectHideFlags: 0

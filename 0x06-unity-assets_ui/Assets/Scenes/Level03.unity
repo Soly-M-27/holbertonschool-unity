@@ -4036,7 +4036,6 @@ GameObject:
   - component: {fileID: 906118050}
   - component: {fileID: 906118051}
   - component: {fileID: 906118053}
-  - component: {fileID: 906118054}
   - component: {fileID: 906118055}
   m_Layer: 0
   m_Name: Player
@@ -4174,21 +4173,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &906118054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906118044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c7a8c8e341724b809cddb34f5024f0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pause: {fileID: 1702003956}
-  MainCam: {fileID: 580392103}
-  player: {fileID: 906118044}
 --- !u!114 &906118055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8240,11 +8224,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 977b6f66ece1244e987520d3d63e6af4, type: 3}
---- !u!1 &1702003956 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5034383956605615238, guid: 977b6f66ece1244e987520d3d63e6af4, type: 3}
-  m_PrefabInstance: {fileID: 1702003955}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1705585869 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8766471599729590281, guid: c5e091a9136ba444197269cecc4eec9f, type: 3}
