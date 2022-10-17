@@ -8,6 +8,7 @@ public class WinTrigger : MonoBehaviour
 {
     public GameObject player;
     public TMP_Text TimerText;
+    public GameObject WinCanvas;
 
     void Start()
     {
@@ -21,8 +22,9 @@ public class WinTrigger : MonoBehaviour
         {
             Get.CollidedWithFlag = true;
             player.GetComponent<Timer>().enabled = false;
-            TimerText.color = Color.green;
-            TimerText.fontSize = 60;
+            WinCanvas.SetActive(true);
+            /*TimerText.color = Color.green;
+            TimerText.fontSize = 60;*/
         }
     }
 }

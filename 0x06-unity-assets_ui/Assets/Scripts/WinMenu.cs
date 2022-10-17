@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class WinMenu : MonoBehaviour
 {
-    private int Next;
-    private int Total;
+    private int next;
+    private int total;
 
     // Start is called before the first frame update
     void Start()
     {
-        Next = SceneManager.GetActiveScene().buildIndex + 1;
-        Total = SceneManager.sceneCountInBuildSettings - 1;   
+        next = SceneManager.GetActiveScene().buildIndex + 1;
+        total = SceneManager.sceneCountInBuildSettings - 1;   
     }
 
     public void MainMenu()
@@ -22,13 +22,13 @@ public class WinMenu : MonoBehaviour
 
     public void Next()
     {
-        if (Next > Total)
+        if (next > total)
         {
             MainMenu();
         }
         else
         {
-            SceneManager.LoadScene(Next);
+            SceneManager.LoadScene(next);
         }
     }
 }

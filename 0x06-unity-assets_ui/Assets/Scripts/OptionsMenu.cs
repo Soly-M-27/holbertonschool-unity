@@ -23,11 +23,9 @@ public class OptionsMenu : MonoBehaviour
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("Previous"));
     }
-
     // Apply Button
     public void Apply()
     {
         PlayerPrefs.SetInt("InvertedYToggle", checkbox.isOn ? 1 : 0);
-        Back();
     }
 }
