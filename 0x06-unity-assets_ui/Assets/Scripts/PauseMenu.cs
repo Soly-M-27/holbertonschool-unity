@@ -33,14 +33,17 @@ public class PauseMenu : MonoBehaviour
         pause.SetActive(true);
         player.GetComponent<Timer>().enabled = false;
         MainCam.GetComponent<CameraController>().enabled = false;
+        player.GetComponent<PlayerController>().enabled = false;
     }
 
     // Resume Game
     public void Resume()
     {
         Time.timeScale = 1;
-        MainCam.GetComponent<CameraController>().enabled = true;
         pause.SetActive(false);
+        player.GetComponent<Timer>().enabled = true;
+        MainCam.GetComponent<CameraController>().enabled = true;
+        player.GetComponent<PlayerController>().enabled = true;
     }
 
     // Restart Level
