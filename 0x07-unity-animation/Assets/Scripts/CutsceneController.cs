@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class CutsceneController : MonoBehaviour
 {
-    public Animator anim;
     public GameObject Player;
     public GameObject MainCam;
     public GameObject TimeCanvas;

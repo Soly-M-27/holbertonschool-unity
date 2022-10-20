@@ -8331,6 +8331,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &1225601063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8270041696264363819, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+  m_PrefabInstance: {fileID: 9080522158509548808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1225601065 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3417927978465370091, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+  m_PrefabInstance: {fileID: 9080522158509548808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1231923951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1586702691628044531, guid: 9ea58c3153c134d5999cbf9c714fb724, type: 3}
@@ -14336,6 +14346,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3417927978465370091, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4519003953224162649, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14384,6 +14398,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8270041696264363819, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+      propertyPath: m_TagString
+      value: tyPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080522158509548810, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1225601065}
+    - target: {fileID: 9080522158509548810, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+      propertyPath: tyPlayer
+      value: 
+      objectReference: {fileID: 1225601063}
     - target: {fileID: 9080522158509548834, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: TimerText
       value: 

@@ -20,34 +20,35 @@ public class PlayerController : MonoBehaviour
     // when character is on the ground to avoid jerky jumping;
     private float originalStepOffset;
     private Vector3 v_movement;
-    public GameObject player;
+    public GameObject player, tyPlayer;
 
     float H, V;
 
     public bool CollidedWithFlag = false;
+    
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         player = GameObject.Find("Player");
+        tyPlayer = GameObject.Find("tyPlayer");
         originalStepOffset = characterController.stepOffset;
         rb = GetComponent<Rigidbody>();
         //start_pos = new Vector3(0f, 50f, 0f);
+        //anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //I have no idea why the heck this doesn't work
         //Debug.Log(player.transform.position.y);
 
         H = Input.GetAxis("Horizontal");
         V = Input.GetAxis("Vertical");
-    }
 
-    private void FixedUpdate()
-    {
         v_movement = characterController.transform.forward * V;
 
         characterController.transform.Rotate(Vector3.up * H * (100f * Time.deltaTime));
@@ -106,9 +107,16 @@ public class PlayerController : MonoBehaviour
         if (CollidedWithFlag == false)
         {
             if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)
-            || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+            || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)
+            || Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") 
+            || Input.GetKey("d"))
             {
                 this.GetComponent<Timer>().enabled = true;
+                anim.SetBool("isRunning", true);
+            }
+            else
+            {
+                anim.SetBool("isRunning", false);
             }
         }
 
@@ -145,5 +153,17 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(0, 25, 0);
             //Debug.Log("We are falling");
         }
+
+        /*if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)
+            || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)
+            || Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") 
+            || Input.GetKey("d"))
+        {
+            anim.SetBool("isRunning", true);
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
+        }*/
     }
 }

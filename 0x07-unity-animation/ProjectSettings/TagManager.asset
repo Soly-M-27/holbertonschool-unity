@@ -10,6 +10,7 @@ TagManager:
   - Level03
   - Options
   - InvertedYToggle
+  - tyPlayer
   layers:
   - Default
   - TransparentFX
