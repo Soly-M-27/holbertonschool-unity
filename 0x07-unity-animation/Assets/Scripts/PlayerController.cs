@@ -210,6 +210,7 @@ public class PlayerController : MonoBehaviour
                 Vector3 mDir = Quaternion.Euler(0f, MainAngle, 0f) * Vector3.forward;
                 characterController.Move(mDir.normalized * speed * Time.deltaTime);
             }
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
     void FallingOut()
@@ -219,6 +220,8 @@ public class PlayerController : MonoBehaviour
             //anim.SetBool("isFalling", true);
             transform.position = new Vector3(0, 35, 0);
         }
+        
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
     void Jumping()
@@ -227,10 +230,20 @@ public class PlayerController : MonoBehaviour
         {
             //anim.SetBool("isFalling", false);
             //anim.SetBool("isGrounded", true);
-            v_velocity.y = Mathf.Sqrt(jumpForce * -1f * -9.81f);
+            v_velocity.y = -9.81f * Time.deltaTime;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+        }
+        if (Input.GetKey(KeyCode.Space) && characterController.isGrounded)
+        {
+            //anim.SetTrigger("Jump");
+            //anim.SetBool("isGrounded", false);
+            v_velocity.y += Mathf.Sqrt(jumpForce * -1f * -9.81f);
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
 
-        v_velocity.y = -9.81f * Time.deltaTime;
+        v_velocity.y += -9.81f * Time.deltaTime;
         characterController.Move(v_velocity * Time.deltaTime);
+
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 }
