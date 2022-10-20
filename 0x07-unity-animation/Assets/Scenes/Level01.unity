@@ -6049,7 +6049,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
+  m_LocalRotation: {x: 0.07845911, y: 0, z: 0, w: 0.9969173}
   m_LocalPosition: {x: 0, y: 2.5, z: -6.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6097,10 +6097,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.3321738
-  m_Height: 2.667204
+  m_Radius: 0.37812996
+  m_Height: 1.0628378
   m_Direction: 1
-  m_Center: {x: -0.30436528, y: 0.0000000021106086, z: -0.52780867}
+  m_Center: {x: -0.34657127, y: -0.08855027, z: 0.5764694}
 --- !u!1 &963799750 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8f0d89d54b4e241958609b7ed59ebce6, type: 3}
@@ -14150,6 +14150,26 @@ PrefabInstance:
       propertyPath: TimeCanvas
       value: 
       objectReference: {fileID: 1593508636}
+    - target: {fileID: 1557827961, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
+      propertyPath: m_Height
+      value: 0.9148474
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557827961, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
+      propertyPath: m_Radius
+      value: 0.47535414
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557827961, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
+      propertyPath: m_Center.x
+      value: -0.20611274
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557827961, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
+      propertyPath: m_Center.y
+      value: -0.08596492
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557827961, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
+      propertyPath: m_Center.z
+      value: 0.047732715
+      objectReference: {fileID: 0}
     - target: {fileID: 4390750428049384593, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -14197,6 +14217,10 @@ PrefabInstance:
     - target: {fileID: 4390750428049384598, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
       propertyPath: m_Name
       value: CutsceneCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689286489394873286, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
+      propertyPath: m_Avatar
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
@@ -14336,6 +14360,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3417927978465370091, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4519003953224162649, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14383,6 +14411,10 @@ PrefabInstance:
     - target: {fileID: 7302428257597974060, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815991607817444942, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+      propertyPath: m_Direction
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9080522158509548834, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: TimerText
