@@ -14403,9 +14403,17 @@ PrefabInstance:
       value: tyPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 9080522158509548810, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+      propertyPath: Cam
+      value: 
+      objectReference: {fileID: 963194228}
+    - target: {fileID: 9080522158509548810, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: anim
       value: 
       objectReference: {fileID: 1225601065}
+    - target: {fileID: 9080522158509548810, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9080522158509548810, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: tyPlayer
       value: 
