@@ -14150,26 +14150,6 @@ PrefabInstance:
       propertyPath: TimeCanvas
       value: 
       objectReference: {fileID: 1593508636}
-    - target: {fileID: 1557827961, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
-      propertyPath: m_Height
-      value: 0.9148474
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557827961, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
-      propertyPath: m_Radius
-      value: 0.47535414
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557827961, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
-      propertyPath: m_Center.x
-      value: -0.20611274
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557827961, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
-      propertyPath: m_Center.y
-      value: -0.08596492
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557827961, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
-      propertyPath: m_Center.z
-      value: 0.047732715
-      objectReference: {fileID: 0}
     - target: {fileID: 4390750428049384593, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -14217,10 +14197,6 @@ PrefabInstance:
     - target: {fileID: 4390750428049384598, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
       propertyPath: m_Name
       value: CutsceneCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 6689286489394873286, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
-      propertyPath: m_Avatar
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fce49d3af3c144f7b8ef279cb03347e, type: 3}
@@ -14363,7 +14339,7 @@ PrefabInstance:
     - target: {fileID: 3417927978465370091, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: c9f4e03b04ea14d7bb4933145d6eeddd, type: 2}
     - target: {fileID: 4519003953224162649, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14411,10 +14387,6 @@ PrefabInstance:
     - target: {fileID: 7302428257597974060, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7815991607817444942, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
-      propertyPath: m_Direction
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9080522158509548834, guid: b893386078d7d4a1baff08f6345d5d83, type: 3}
       propertyPath: TimerText

@@ -19,8 +19,10 @@ public class PlayerController : MonoBehaviour
     // Private field to fix Player StepOffset. Set it to 0
     // when character is on the ground to avoid jerky jumping;
     private float originalStepOffset;
-    Vector3 start_pos;
+    private Vector3 v_movement;
     public GameObject player;
+
+    float H, V;
 
     public bool CollidedWithFlag = false;
 
@@ -40,22 +42,29 @@ public class PlayerController : MonoBehaviour
         //I have no idea why the heck this doesn't work
         //Debug.Log(player.transform.position.y);
 
-        float H = Input.GetAxis("Horizontal");
-        float V = Input.GetAxis("Vertical");
+        H = Input.GetAxis("Horizontal");
+        V = Input.GetAxis("Vertical");
+    }
 
-        Vector3 moveDir = new Vector3(H, 0, V);
+    private void FixedUpdate()
+    {
+        v_movement = characterController.transform.forward * V;
+
+        characterController.transform.Rotate(Vector3.up * H * (100f * Time.deltaTime));
+
+        //Vector3 moveDir = new Vector3(H, 0, V);
         /*if (moveDir.y <= -25)
         {
             player.transform.position = start_pos; //does not work
         }*/
         //Debug.Log("moveDir is: " + moveDir);
-        float magnitude = Mathf.Clamp01(moveDir.magnitude) * speed;
+        float magnitude = Mathf.Clamp01(v_movement.magnitude) * speed;
         /*if (magnitude <= -25)
         {
             player.transform.position = start_pos; //does not work
         }*/
         //Debug.Log("magnitude is: " + magnitude);
-        moveDir.Normalize();
+        v_movement.Normalize();
 
         // Adjust the gravity. We're getting the physics gravity value
         // and adding this amount to our ySpeed every second.
@@ -77,7 +86,7 @@ public class PlayerController : MonoBehaviour
         // Now we need to use our ySpeed when moving the character. 
         // To do this we need to extract the calculation we pass into
         // the SimpleMove method and instead assign it to variable.
-        Vector3 velocity = moveDir * magnitude;
+        Vector3 velocity = v_movement * magnitude;
         velocity.y = ySpeed;
         //Debug.Log("velocity is: " + velocity);
         //Debug.Log("velocity.y is: " + velocity.y);
