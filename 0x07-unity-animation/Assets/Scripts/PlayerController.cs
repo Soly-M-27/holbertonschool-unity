@@ -193,6 +193,7 @@ public class PlayerController : MonoBehaviour
             || Input.GetKey("d"))
             {
                 anim.SetBool("isRunning", true);
+                anim.SetBool("isIdle", false);
             }
             else
             {
@@ -217,7 +218,7 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.y <= -25)
         {
-            //anim.SetBool("isFalling", true);
+            anim.SetBool("isFalling", true);
             transform.position = new Vector3(0, 35, 0);
         }
         
@@ -228,15 +229,15 @@ public class PlayerController : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
-            //anim.SetBool("isFalling", false);
-            //anim.SetBool("isGrounded", true);
+            anim.SetBool("isFalling", false);
+            anim.SetBool("isGrounded", true);
             v_velocity.y = -9.81f * Time.deltaTime;
             rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
         if (Input.GetKey(KeyCode.Space) && characterController.isGrounded)
         {
-            //anim.SetTrigger("Jump");
-            //anim.SetBool("isGrounded", false);
+            anim.SetTrigger("Jump");
+            anim.SetBool("isGrounded", false);
             v_velocity.y += Mathf.Sqrt(jumpForce * -1f * -9.81f);
             rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
