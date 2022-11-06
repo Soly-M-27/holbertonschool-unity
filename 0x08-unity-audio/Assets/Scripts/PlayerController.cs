@@ -187,7 +187,7 @@ public class PlayerController : MonoBehaviour
         
         float magnitude = Mathf.Clamp01(v_movement.magnitude) * speed;
 
-        /*if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)
             || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)
             || Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s")
             || Input.GetKey("d"))
@@ -198,7 +198,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 anim.SetBool("isRunning", false);
-            }*/
+            }
 
             v_movement = new Vector3(H, 0, V).normalized;
 
@@ -218,7 +218,7 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.y <= -25)
         {
-            //anim.SetBool("isFalling", true);
+            anim.SetBool("isFalling", true);
             transform.position = new Vector3(0, 35, 0);
         }
         
@@ -229,15 +229,15 @@ public class PlayerController : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
-            //anim.SetBool("isFalling", false);
-            //anim.SetBool("isGrounded", true);
+            anim.SetBool("isFalling", false);
+            anim.SetBool("isGrounded", true);
             v_velocity.y = -9.81f * Time.deltaTime;
             rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
         if (Input.GetKey(KeyCode.Space) && characterController.isGrounded)
         {
-            //anim.SetTrigger("Jump");
-            //anim.SetBool("isGrounded", false);
+            anim.SetTrigger("Jump");
+            anim.SetBool("isGrounded", false);
             v_velocity.y += Mathf.Sqrt(jumpForce * -1f * -9.81f);
             rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
